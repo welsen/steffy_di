@@ -134,7 +134,7 @@ class Storage implements IStorage {
   }
 
   private store(injectable: Injectable) {
-    if (this.defaultContainer.has(injectable.identifier)) throw new Error(`already stored`);
+    if (this.defaultContainer.has(injectable.identifier) && !MetadataResolver.isOverride(injectable.ctor)) throw new Error(`already stored`);
     this.defaultContainer.set(injectable.identifier, injectable);
   }
 

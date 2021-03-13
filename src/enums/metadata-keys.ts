@@ -7,6 +7,7 @@ enum METADATA_KEYS {
   TAG = 'steffy-di:tag',
   TAGGED = 'steffy-di:tagged',
   TAGGED_PROP = 'steffy-di:tagged-prop',
+  OVERRIDE = 'steffy-di:override',
 }
 
 export default METADATA_KEYS;
